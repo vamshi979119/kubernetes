@@ -6,11 +6,12 @@ metadata:
 spec:
   interval: 5m
   dependsOn:
-    - name: istio-base
-      namespace: istio-system
+  - name: istio-base
+    namespace: istio-system
   chart:
     spec:
       chart: istiod
+      version: "1.20.0"
       sourceRef:
         kind: HelmRepository
         name: istio
