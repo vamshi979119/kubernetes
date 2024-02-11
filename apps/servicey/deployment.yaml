@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: servicey
+  namespace: servicey
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: servicey
+  template:
+    metadata:
+      labels:
+        app: servicey
+    spec:
+      containers:
+      - name: servicey
+        image: vamshi979119/s2s:v1.0.0
+        ports:
+        - containerPort: 8080
