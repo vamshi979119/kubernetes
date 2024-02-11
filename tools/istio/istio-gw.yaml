@@ -12,9 +12,9 @@ spec:
     namespace: istio-system
   chart:
     spec:
-      chart: istio-ingress
+      chart: gateway
       version: "1.20.0"
       sourceRef:
         kind: HelmRepository
-        name: istio/gateway
+        name: istio
         namespace: istio-system
