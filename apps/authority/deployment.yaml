@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: authority
+  namespace: authority
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: authority
+  template:
+    metadata:
+      labels:
+        app: authority
+    spec:
+      containers:
+      - name: authority
+        image: vamshi979119/authority:v1.0.0
+        ports:
+        - containerPort: 8080
