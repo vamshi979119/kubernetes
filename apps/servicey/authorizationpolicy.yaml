@@ -1,0 +1,14 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: servicey-jwt-authorization
+  namespace: servicey
+spec:
+  selector:
+    matchLabels:
+      app: servicey
+  action: ALLOW
+  rules:
+  - from:
+    - source:
+        requestPrincipals: ["*"]
