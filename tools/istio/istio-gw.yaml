@@ -16,5 +16,5 @@ spec:
       version: "1.20.0"
       sourceRef:
         kind: HelmRepository
-        name: istio
+        name: istio/gateway
         namespace: istio-system
